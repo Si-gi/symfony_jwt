@@ -20,7 +20,7 @@
         "symfony/intl": "4.4.*",
         "symfony/mailer": "4.4.*",
         "symfony/monolog-bundle": "^3.1",
-        "symfony/orm-pack": "*",
+        "doctrine/orm": "^2.7",
         "symfony/process": "4.4.*",
         "symfony/security-bundle": "4.4.*",
         "symfony/serializer": "4.4.*",
@@ -34,11 +34,16 @@
         "symfony/yaml": "4.4.*"
     },
     "require-dev": {
-        "doctrine/doctrine-fixtures-bundle": "^3.3",
-        "symfony/debug-pack": "*",
-        "symfony/maker-bundle": "^1.0",
-        "symfony/profiler-pack": "*",
-        "symfony/test-pack": "*"
+        "symfony/browser-kit": "^4.4",
+        "symfony/css-selector": "^4.4",
+        "symfony/debug-bundle": "^4.4",
+        "symfony/maker-bundle": "^1.20",
+        "symfony/monolog-bundle": "^3.0",
+        "symfony/phpunit-bridge": "^5.1",
+        "symfony/stopwatch": "^4.4",
+        "symfony/twig-bundle": "^4.4",
+        "symfony/var-dumper": "^4.4",
+        "symfony/web-profiler-bundle": "^4.4"
     },
     "config": {
         "platform": {
