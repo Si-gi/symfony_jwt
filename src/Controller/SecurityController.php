@@ -23,19 +23,19 @@ class SecurityController extends AbstractController
         // last username entered by the user
         $lastUsername = $authenticationUtils->getLastUsername();
 
-        return $this->render('security/login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
+        return $this->render('security/login. html.twig', ['last_username' => $lastUsername, 'error' => $error]);
     }
 
     /**
      * @Route(name="api_login", path="/api/login_check")
+     * @return JsonResponse
      */
-    public function api_login(){
+    public function api_login(): JsonResponse{
         $user = $this->getUser();
             return new Response([
             'email' => $user->getEmail(),
             'roles' => $user->getRoles(),
- ]);
-
+        ]);
     }
 
     /**

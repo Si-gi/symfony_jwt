@@ -1,56 +1,27 @@
 {
+    "name": "chalasr/lexik-jwt-authentication-sandbox",
+    "description": "Sandbox for the LexikJWTAuthenticationBundle Symfony bundle",
     "type": "project",
-    "license": "proprietary",
     "require": {
         "php": "^7.1.3",
-        "ext-ctype": "*",
         "ext-iconv": "*",
-        "symfony/apache-pack": "^1.0",
-        "phpdocumentor/reflection-docblock": "^5.2",
-        "sensio/framework-extra-bundle": "^5.1",
-        "symfony/asset": "4.4.*",
-        "doctrine/annotations": "^1.0",
-        "doctrine/orm": "^2.7",
-        "doctrine/doctrine-bundle": "^2.1",
-        "doctrine/doctrine-migrations-bundle": "^3.0",
-        "symfony/console": "4.4.*",
-        "symfony/dotenv": "4.4.*",
-        "symfony/expression-language": "4.4.*",
-        "symfony/flex": "^1.3.1",
-        "symfony/form": "4.4.*",
-        "symfony/framework-bundle": "4.4.*",
-        "symfony/http-client": "4.4.*",
-        "symfony/intl": "4.4.*",
-        "symfony/mailer": "4.4.*",
-        "symfony/monolog-bundle": "^3.1",        
-        "symfony/process": "4.4.*",
-        "symfony/security-bundle": "4.4.*",
-        "symfony/serializer": "4.4.*",
-        "symfony/serializer-pack": "*",
-        "symfony/translation": "4.4.*",
-        "symfony/twig-pack": "*",
-        "twig/extra-bundle": "^2.12|^3.0",
-        "twig/twig": "^2.12|^3.0",
-        "symfony/validator": "4.4.*",
-        "symfony/web-link": "4.4.*",
-        "symfony/yaml": "4.4.*"
+        "lexik/jwt-authentication-bundle": "^2.5",
+        "symfony/console": "^4.0",
+        "symfony/debug-pack": "^1.0",
+        "symfony/flex": "^1.0",
+        "symfony/framework-bundle": "^4.0",
+        "symfony/lts": "^4@dev",
+        "symfony/orm-pack": "^1.0",
+        "symfony/profiler-pack": "^1.0",
+        "symfony/twig-bundle": "^4.0",
+        "symfony/var-dumper": "^4.0",
+        "symfony/web-server-bundle": "^4.0",
+        "symfony/yaml": "^4.0"
     },
     "require-dev": {
-        "symfony/browser-kit": "^4.4",
-        "symfony/css-selector": "^4.4",
-        "symfony/debug-bundle": "^4.4",
-        "symfony/maker-bundle": "^1.20",
-        "symfony/monolog-bundle": "^3.0",
-        "symfony/phpunit-bridge": "^5.1",
-        "symfony/stopwatch": "^4.4",
-        "symfony/twig-bundle": "^4.4",
-        "symfony/var-dumper": "^4.4",
-        "symfony/web-profiler-bundle": "^4.4"
+        "symfony/dotenv": "^4.0"
     },
     "config": {
-        "platform": {
-            "php" :"7.2.9"
-        },
         "preferred-install": {
             "*": "dist"
         },
@@ -67,10 +38,7 @@
         }
     },
     "replace": {
-        "paragonie/random_compat": "2.*",
-        "symfony/polyfill-ctype": "*",
         "symfony/polyfill-iconv": "*",
-        "symfony/polyfill-php72": "*",
         "symfony/polyfill-php71": "*",
         "symfony/polyfill-php70": "*",
         "symfony/polyfill-php56": "*"
@@ -78,7 +46,7 @@
     "scripts": {
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+            "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
         },
         "post-install-cmd": [
             "@auto-scripts"
@@ -92,8 +60,8 @@
     },
     "extra": {
         "symfony": {
-            "allow-contrib": false,
-            "require": "4.4.*"
+            "id": "01C5358YPF3C4VMN2MME11B1JN",
+            "allow-contrib": false
         }
     }
 }

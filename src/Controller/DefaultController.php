@@ -1,19 +1,15 @@
 <?php
+
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Routing\Annotation\Route;
-
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use App\Entity\User;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class DefaultController extends AbstractController
 {
-
-    /**
-     * @Route("/", name="index")
-     */
-    public function index(){
-        return $this->render('index.html.twig');
-    }
     public function register(Request $request, UserPasswordEncoderInterface $encoder)
     {
         $em = $this->getDoctrine()->getManager();
@@ -35,4 +31,3 @@ class DefaultController extends AbstractController
         return new Response(sprintf('Logged in as %s', $this->getUser()->getUsername()));
     }
 }
-    
